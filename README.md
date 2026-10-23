@@ -12,6 +12,8 @@ saved in your browser's localStorage, so your list is still there next time.
 - Edit genre, notes, and star ratings at any time
 - Rate films from one to five stars by clicking them
 - Filter by All, Want to Watch, or Watched
+- Search titles, genres and notes within the selected status; sort by newest,
+  title or rating without changing the saved order
 - See totals for films, watched, want to watch, and the average rating of
   watched films
 - Newest films show up first
@@ -20,6 +22,10 @@ saved in your browser's localStorage, so your list is still there next time.
 
 Titles are required, blank or spaces-only titles are ignored, and duplicate
 titles are turned away.
+Title matching also normalizes repeated spaces and Unicode-width variants.
+If browser storage cannot save a change, a visible warning appears. Invalid
+saved records are kept in storage but excluded from the displayed collection.
+Run `npm test`, `npm run lint` and `npm run build` before releasing.
 
 ## Running it locally
 
