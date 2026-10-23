@@ -15,9 +15,9 @@ const EMPTY_MESSAGES = {
   },
 }
 
-function FilmList({ films, filter, onToggleStatus, onDelete, onUpdate, onRate }) {
+function FilmList({ films, filter, searching, onToggleStatus, onDelete, onUpdate, onRate }) {
   if (films.length === 0) {
-    const message = EMPTY_MESSAGES[filter] || EMPTY_MESSAGES.All
+    const message = searching ? { title: 'No matching films', body: 'Try another title, genre or note, or clear your search.' } : EMPTY_MESSAGES[filter] || EMPTY_MESSAGES.All
     return (
       <div className="empty-state card">
         <p className="empty-title">{message.title}</p>
